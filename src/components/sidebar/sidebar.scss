@@ -1,0 +1,20 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.sidebar-container {
+    width: 20%;
+    height: 100vh;
+    overflow-y: scroll;
+    @include styledScrollbar(5px,$grey);
+    @include shadow;
+    z-index: 100;
+    background: #fff;
+}
+
+.search-bar {
+    padding: 0px 1rem;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

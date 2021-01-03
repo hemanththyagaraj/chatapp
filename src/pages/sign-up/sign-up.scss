@@ -1,0 +1,63 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.sign-up-form {
+    width: 50%;
+    height: 60vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 2rem;
+    @include shadow;
+    padding: 2rem 6rem;
+}
+
+.sign-up-input {
+    margin: 1rem 0px;
+}
+
+.sign-up-title {
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.sign-up-subtitle {
+    text-align: center;
+    font-size: 2rem;
+    margin: 3rem 0;
+    color: $secondary-dark;
+}
+
+.sign-up-button {
+    display: block;
+    margin: 2rem auto;
+}
+
+.button-google-login-container {
+    padding: 1rem;
+    width: 6rem;
+    height: 6rem;
+    margin: 0 auto;
+    @include shadow;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.button-google-login {
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto;
+    background-image: url('../../assets/google_icon.svg');
+}
+
+@media only screen and (max-width: 768px) {
+    .sign-up-form {
+    width: 90%;
+    padding: 1rem 2rem;
+    top: 45%;
+    height: 80vh;
+    }
+}

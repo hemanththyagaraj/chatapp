@@ -1,0 +1,9 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.my-chat {
+    padding-top: 3rem;
+    height: 90vh;
+    overflow-y: scroll;
+    @include styledScrollbar(5px, $grey)
+}

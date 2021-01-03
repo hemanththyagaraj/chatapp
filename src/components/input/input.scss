@@ -1,0 +1,15 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+input {
+    padding: 1.5rem;
+    width: 100%;
+    border: none;
+    border-radius: 1rem;
+    font-size: 2.2rem;
+    @include shadow;
+}
+
+.input::placeholder {
+    color: rgb(190, 190, 190);
+}

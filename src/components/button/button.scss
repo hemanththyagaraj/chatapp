@@ -1,0 +1,31 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+#button {
+    border: none;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    line-height: 1.2;
+    @include shadow;
+}
+
+.small {
+    font-size: 1rem;
+    padding: 1rem 2.5rem;
+    border-radius: 2rem;
+}
+
+.medium {
+    font-size: 1.5rem;
+    padding: 1.5rem 3.5rem;
+    border-radius: 3rem;
+}
+
+.large {
+    border-radius: 3.5rem;
+    font-size: 2rem;
+    padding: 2rem 5rem;
+}

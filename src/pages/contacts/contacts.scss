@@ -1,0 +1,68 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.contacts {
+    padding: 3rem 0;
+    height: 100vh;
+}
+
+.contacts-title {
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 2rem;
+}
+
+.no-users {
+    text-align: center;
+    margin-top: 10rem;
+    font-size: 4rem;
+    color: $grey;
+}
+
+.contacts-collection {
+    width: 90%;
+    margin: 10rem auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    background-color: $primary-light;
+    min-height: 10rem;
+    width: 24%;
+    position: relative;
+    @include shadow;
+}
+
+.display-image {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.display-name {
+    margin-top: 7rem;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.display-email {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 2rem;
+    color: $grey;
+}
+
+.contact-divider {
+    margin-top: 1rem;
+    width: 90%;
+    margin: 2rem auto;
+}
+
+.btn-follow {
+    display: block;
+    margin: 1rem auto 2rem auto;
+}

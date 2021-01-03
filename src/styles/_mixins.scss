@@ -1,0 +1,17 @@
+@import './variables';
+
+@mixin shadow {
+    -webkit-box-shadow: 0px 3px 12px 1px rgba($color: $primary-dark, $alpha: 0.3);
+    -moz-box-shadow: 0px 3px 12px 1px rgba($color: $primary-dark, $alpha: 0.3);
+    box-shadow: 0px 3px 12px 1px rgba($color: $primary-dark, $alpha: 0.3);
+}
+
+@mixin styledScrollbar($size, $color) {
+    &::-webkit-scrollbar {
+        width: $size;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $color;
+    }
+}
