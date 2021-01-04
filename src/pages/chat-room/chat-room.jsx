@@ -3,13 +3,13 @@ import MessageRoom from '../../components/message-room/message-room'
 import Sidebar from '../../components/sidebar/sidebar'
 import './chat-room.scss'
 
-const Chat = () => {
+const ChatRoom = () => {
     return (
-        <main className="chat-container">
+        <main className="chat-room-container">
             <Sidebar />
             <MessageRoom />
         </main>
     )
 }
 
-export default Chat
+export default ChatRoom

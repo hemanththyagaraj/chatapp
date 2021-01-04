@@ -2,8 +2,15 @@
 @import '../../styles/variables';
 
 .my-chat {
+    width: 100%;
     padding-top: 3rem;
-    height: 90vh;
-    overflow-y: scroll;
-    @include styledScrollbar(5px, $grey)
+    height: 80vh;
+    overflow-y: auto;
+    @include styledScrollbar(5px, $grey);
+}
+
+.no-chat {
+    text-align: center;
+    font-size: 3rem;
+    color: $grey;
 }

@@ -37,14 +37,12 @@ export const signInUserWithGoogle = async () => {
     }
 }
 
-export const signOutUser = () => {
-    return async (dispatch) => {
-        try {
-            await auth.signOut()
-            store.dispatch(onSignOutSuccess())
-            localStorage.removeItem('user')
-        } catch (error) {
-            onSignOutFailure()
-        }
+export const signOutUser = async () => {
+    try {
+        await auth.signOut()
+        store.dispatch(onSignOutSuccess())
+        localStorage.removeItem('user')
+    } catch (error) {
+        onSignOutFailure()
     }
 }

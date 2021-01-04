@@ -1,0 +1,48 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.navbar {
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.logo {
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: $primary-green;
+    color: white;
+    font-weight: 700;
+    font-size: 3rem;
+    margin-right: 1rem;
+    border-radius: 0.5rem;
+}
+
+.logo-text {
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.add-new {
+    @include shadow;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+.add-new .add-new-img {
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url('../../assets/new_contact.svg');
+}

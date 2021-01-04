@@ -2,19 +2,29 @@
 @import '../../styles/variables';
 
 .sidebar-container {
+    position: relative;
     width: 20%;
     height: 100vh;
-    overflow-y: scroll;
     @include styledScrollbar(5px,$grey);
     @include shadow;
     z-index: 100;
-    background: #fff;
+    background: $primary-light;
+}
+
+.appbar {
+    height: 20vh;
 }
 
 .search-bar {
-    padding: 0px 1rem;
-    height: 10vh;
+    padding: 3rem 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .sidebar-container {
+        width: 80%;
+        position: absolute;
+    }
 }
