@@ -11,6 +11,8 @@
     border-radius: 2rem;
     @include shadow;
     padding: 2rem 6rem;
+    display: flex;
+    align-items: center;
 }
 
 .sign-up-input {
@@ -58,6 +60,6 @@
     width: 90%;
     padding: 1rem 2rem;
     top: 45%;
-    height: 80vh;
+    height: 60vh;
     }
 }

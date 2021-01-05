@@ -1,12 +1,15 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import Button from '../../components/button/button'
 import { addNewContact } from '../../redux/actions/contacts-action'
 
 const Contact = (props) => {
-    const { photoURL, displayName, email } = props
+    const { photoURL, displayName, email, uid } = props
+    const { user } = useSelector(state => state.auth)
 
     const handleClick = () => {
-        addNewContact(props)
+        const loggedInUser = { photoURL: user.photoURL, displayName: user.displayName, uid: user.uid, email: user.email }
+        addNewContact(loggedInUser, { photoURL, displayName, email, uid })
     }
 
     return (

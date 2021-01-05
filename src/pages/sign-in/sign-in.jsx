@@ -21,15 +21,17 @@ const SignIn = (props) => {
 
     return (
         <div className="sign-up-form">
-            <h2 className="sign-up-title">Sign in</h2>
-            <form>
-                <Input required className="sign-up-input" type="text" placeholder="Username" />
-                <Input required className="sign-up-input" type="password" placeholder="Password" />
-                <Button className="medium sign-up-button">sign in</Button>
-            </form>
-            <p className="sign-up-subtitle">Or sign in with</p>
-            <div className="button-google-login-container">
-                <div className="button-google-login" onClick={handleGoogleLogin} />
+            <div>
+                <h2 className="sign-up-title">Sign in</h2>
+                <form>
+                    <Input required className="sign-up-input" type="text" placeholder="Username" />
+                    <Input required className="sign-up-input" type="password" placeholder="Password" />
+                    <Button className="medium sign-up-button">sign in</Button>
+                </form>
+                <p className="sign-up-subtitle">Or sign in with</p>
+                <div className="button-google-login-container">
+                    <div className="button-google-login" onClick={handleGoogleLogin} />
+                </div>
             </div>
         </div>
     )

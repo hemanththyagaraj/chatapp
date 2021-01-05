@@ -1,16 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useSelector } from 'react-redux'
+import { getMyContacts } from '../../redux/actions/contacts-action'
 import Chat from '../chat/chat'
 import './my-chat.scss'
 
 const MyChat = () => {
-    const myChats = [
-    ]
+
+    const { auth, contact: { myContacts = [] } } = useSelector(state => state)
+
+    useEffect(() => {
+        getMyContacts(auth.user.uid)
+    }, [])
+
     return (
         <div className="my-chat">
             {
-                !myChats.length
+                !myContacts.length
                     ? <h2 className="no-chat">No chat found</h2>
-                    : myChats.map(chat => {
+                    : myContacts.map(chat => {
                         return <Chat key={chat.uid} {...chat} />
                     })
             }

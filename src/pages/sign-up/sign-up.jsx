@@ -37,37 +37,39 @@ const SignUp = (props) => {
 
     return (
         <div className="sign-up-form">
-            <h2 className="sign-up-title">Sign up</h2>
-            <form onSubmit={handleSubmit}>
-                <Input
-                    onChange={handleChange}
-                    required
-                    className="sign-up-input"
-                    type="text"
-                    placeholder="Username"
-                    name="username"
-                />
-                <Input
-                    name="password"
-                    onChange={handleChange}
-                    required
-                    className="sign-up-input"
-                    type="password"
-                    placeholder="Password"
-                />
-                <Input
-                    onChange={handleChange}
-                    required
-                    className="sign-up-input"
-                    type="password"
-                    placeholder="Confirm Password"
-                    name="confirmPassword"
-                />
-                <Button className="medium sign-up-button">sign up</Button>
-            </form>
-            <p className="sign-up-subtitle">Or sign up with</p>
-            <div className="button-google-login-container">
-                <div className="button-google-login" onClick={handleGoogleLogin} />
+            <div>
+                <h2 className="sign-up-title">Sign up</h2>
+                <form onSubmit={handleSubmit}>
+                    <Input
+                        onChange={handleChange}
+                        required
+                        className="sign-up-input"
+                        type="text"
+                        placeholder="Username"
+                        name="username"
+                    />
+                    <Input
+                        name="password"
+                        onChange={handleChange}
+                        required
+                        className="sign-up-input"
+                        type="password"
+                        placeholder="Password"
+                    />
+                    <Input
+                        onChange={handleChange}
+                        required
+                        className="sign-up-input"
+                        type="password"
+                        placeholder="Confirm Password"
+                        name="confirmPassword"
+                    />
+                    <Button className="medium sign-up-button">sign up</Button>
+                </form>
+                <p className="sign-up-subtitle">Or sign up with</p>
+                <div className="button-google-login-container">
+                    <div className="button-google-login" onClick={handleGoogleLogin} />
+                </div>
             </div>
         </div>
     )

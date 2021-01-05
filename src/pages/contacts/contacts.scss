@@ -34,6 +34,7 @@
     width: 24%;
     position: relative;
     @include shadow;
+    margin: 2rem 0;
 }
 
 .display-image {
@@ -66,4 +67,16 @@
 .btn-follow {
     display: block;
     margin: 1rem auto 2rem auto;
+}
+
+@media only screen and (max-width: 992px) {
+    .contact-card {
+        width: 48%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .contact-card {
+        width: 100%;
+    }
 }
