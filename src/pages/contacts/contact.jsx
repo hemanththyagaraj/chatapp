@@ -1,15 +1,17 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import { useHistory } from 'react-router-dom'
 import Button from '../../components/button/button'
 import { addNewContact } from '../../redux/actions/contacts-action'
 
 const Contact = (props) => {
     const { photoURL, displayName, email, uid } = props
     const { user } = useSelector(state => state.auth)
+    const history = useHistory()
 
     const handleClick = () => {
         const loggedInUser = { photoURL: user.photoURL, displayName: user.displayName, uid: user.uid, email: user.email }
-        addNewContact(loggedInUser, { photoURL, displayName, email, uid })
+        addNewContact(loggedInUser, { photoURL, displayName, email, uid }, history)
     }
 
     return (

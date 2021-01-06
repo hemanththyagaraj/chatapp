@@ -15,11 +15,12 @@ export const fetchContactBook = async (user) => {
     }
 }
 
-export const addNewContact = async (loggedInUser, contact) => {
+export const addNewContact = async (loggedInUser, contact, history) => {
     try {
         await usersRef.doc(loggedInUser.uid).update({ contacts: firebase.firestore.FieldValue.arrayUnion(contact) })
         await usersRef.doc(contact.uid).update({ contacts: firebase.firestore.FieldValue.arrayUnion(loggedInUser) })
         store.dispatch({ type: ADD_NEW_CONTACT_SUCCESS, payload: contact })
+        history.push('/')
     } catch (error) {
         store.dispatch({ type: ADD_NEW_CONTACT_FAILURE })
     }

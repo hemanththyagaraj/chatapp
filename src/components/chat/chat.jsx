@@ -1,5 +1,6 @@
 import React from 'react'
 import { setCurrentConversationId } from '../../redux/actions/conversation-actions'
+import { toggleSideBar } from '../../redux/actions/sidebar-actions'
 import './chat.scss'
 
 const Chat = (props) => {
@@ -7,6 +8,7 @@ const Chat = (props) => {
 
     const handleClick = () => {
         setCurrentConversationId(uid)
+        toggleSideBar()
     }
 
     return (

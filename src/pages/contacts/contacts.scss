@@ -24,7 +24,7 @@
     width: 90%;
     margin: 10rem auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
@@ -34,10 +34,12 @@
     width: 24%;
     position: relative;
     @include shadow;
-    margin: 2rem 0;
+    margin: 5rem 0;
 }
 
 .display-image {
+    width: 7rem;
+    height: 7rem;
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);

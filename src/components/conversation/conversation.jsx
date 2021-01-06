@@ -46,6 +46,7 @@ const Conversation = () => {
                 {
                     messages.map(message => {
                         return <div
+                            key={message.sentAt}
                             className={`${message.senderId === user.uid ? 'sender' : 'receiver'}`}
                         >
                             {message.message}
