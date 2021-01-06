@@ -46,3 +46,31 @@ export const signOutUser = async () => {
         onSignOutFailure()
     }
 }
+
+export const signUpUserWithEmailAndPassword = async (email, password) => {
+    store.dispatch(onSignInRequest())
+    try {
+        const { user } = await auth.createUserWithEmailAndPassword(email, password)
+        store.dispatch(onSignInSuccess(user))
+        localStorage.setItem('user', JSON.stringify(user))
+        storeLoggedInUserIntoDB(user)
+    } catch (error) {
+        window.alert(error.message)
+        localStorage.removeItem('user')
+        store.dispatch(onSignInFailure())
+    }
+}
+
+export const signInUserWithEmailAndPassword = async (email, password) => {
+    store.dispatch(onSignInRequest())
+    try {
+        const { user } = await auth.signInWithEmailAndPassword(email, password)
+        store.dispatch(onSignInSuccess(user))
+        localStorage.setItem('user', JSON.stringify(user))
+        storeLoggedInUserIntoDB(user)
+    } catch (error) {
+        window.alert(error.message)
+        localStorage.removeItem('user')
+        store.dispatch(onSignInFailure())
+    }
+}

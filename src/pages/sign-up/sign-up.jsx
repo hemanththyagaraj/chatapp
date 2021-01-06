@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 import Button from '../../components/button/button'
 import Input from '../../components/input/input'
-import { signInUserWithGoogle } from '../../redux/actions/auth-actions'
+import { signInUserWithGoogle, signUpUserWithEmailAndPassword } from '../../redux/actions/auth-actions'
 import './sign-up.scss'
 
 const SignUp = (props) => {
@@ -17,7 +18,7 @@ const SignUp = (props) => {
         event.preventDefault()
         const { password, confirmPassword, userName } = user
         if (password !== confirmPassword) alert('Passwords do not match')
-
+        else signUpUserWithEmailAndPassword(userName, password)
     }
 
     const handleGoogleLogin = async () => {
@@ -45,8 +46,8 @@ const SignUp = (props) => {
                         required
                         className="sign-up-input"
                         type="text"
-                        placeholder="Username"
-                        name="username"
+                        placeholder="Email"
+                        name="userName"
                     />
                     <Input
                         name="password"
@@ -65,6 +66,7 @@ const SignUp = (props) => {
                         name="confirmPassword"
                     />
                     <Button className="medium sign-up-button">sign up</Button>
+                    <Link className="existing-account" to="/sign-in">I already have an account</Link>
                 </form>
                 <p className="sign-up-subtitle">Or sign up with</p>
                 <div className="button-google-login-container">

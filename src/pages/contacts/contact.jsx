@@ -16,8 +16,8 @@ const Contact = (props) => {
 
     return (
         <div className="contact-card">
-            <img src={photoURL} alt={email} className="display-image" />
-            <p className="display-name">{displayName}</p>
+            {photoURL && <img src={photoURL} alt={email} className="display-image" />}
+            <p className="display-name">{displayName ? displayName : email.split('@')[0]}</p>
             <p className="display-email">{email}</p>
             <hr className="contact-divider" />
             <Button className="medium btn-follow" onClick={handleClick}>Follow</Button>

@@ -56,11 +56,22 @@
     background-image: url('../../assets/google_icon.svg');
 }
 
+.existing-account {
+    text-decoration: none;
+    font-size: 2rem;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    margin-top: 2rem;
+    color: $grey;
+    text-decoration: underline;
+}
+
 @media only screen and (max-width: 768px) {
     .sign-up-form {
     width: 90%;
     padding: 1rem 2rem;
     top: 45%;
-    height: 60vh;
+    height: 70vh;
     }
 }
